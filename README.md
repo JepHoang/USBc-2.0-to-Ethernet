@@ -240,8 +240,7 @@ Priority routing for:
 <td align="center" valign="middle" height="320">
 
 <img width="913" height="410" alt="image" src="https://github.com/user-attachments/assets/14fba79f-b388-4785-901b-62913fd11330" />
-
-
+<img width="1065" height="480" alt="image" src="https://github.com/user-attachments/assets/e3e4f237-e6b3-4276-b133-78a135fa833d" />
 `docs/images/pcb_3d.png`
 
 </td>
