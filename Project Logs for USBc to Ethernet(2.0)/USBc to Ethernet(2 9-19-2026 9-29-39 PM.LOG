@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=MDI_0_P Pin=R23-2
+Removed Pin From Net: NetName=MDC Pin=U3-19
+Added Pin To Net: NetName=MDC Pin=U3-18
+Added Pin To Net: NetName=MDIO Pin=R23-2
+Added Pin To Net: NetName=MDIO Pin=U1-23
+Added Pin To Net: NetName=MDIO Pin=U3-19
+Added Net: Name=MDIO

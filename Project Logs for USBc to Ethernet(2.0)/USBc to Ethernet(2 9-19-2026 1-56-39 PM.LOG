@@ -1,0 +1,16 @@
+Change Component Footprint: Designator=C30 Old Footprint=CAP_0402 New Footprint=CAPC0402(1005)60_L
+Change Component Comment : Designator=C30 Old Comment=100nF, 50V New Comment=Capacitor 1µF +/-20% 10V 0402
+Change Managed Component Library Link : Designator=C30 Old VaultGUID= New VaultGUID=295E54B7-AA79-4721-8AC2-42FA7FCDAE4B Old ItemGUID= New ItemGUID=880E3A89-D724-4508-9C32-93C4F4C5F070 Old RevisionGUID= New RevisionGUID=1B672497-7962-4BE5-A217-04C3171A5815
+Change component parameters: Designator = "C30" ("C30"); Footprint = "CAP_0402"; UniqueID = "\UGHDASIZ" ("\UGHDASIZ")
+Change component parameters (AddParameter): Name = "Capacitor Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case/Package"; Value = "0402"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pins"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ripple Current"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ripple Current (AC)"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS Compliant"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "1µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "10V"; VariantName = "[No Variations]"

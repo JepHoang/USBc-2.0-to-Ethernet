@@ -1,0 +1,103 @@
+Protel Design System Design Rule Check
+PCB File : C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc
+Date     : 9/21/2026
+Time     : 4:02:18 PM
+
+WARNING: Unplated multi-layer pad(s) detected
+   Pad J2-MH2(59.817mm,20.332mm) on Multi-Layer on Net GND_CLASSIS
+   Pad J2-MH1(59.817mm,7.632mm) on Multi-Layer on Net GND_CLASSIS
+
+Processing Rule : Clearance Constraint (Gap=0mm) (Keepout),(IsPad)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.152mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.152mm) (InDifferentialPairClass('DIFF90') or InDifferentialPairClass('DIFF100')),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Yes) (WithinRoom('Small')),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Pad U1-35(23.14mm,20.793mm) on L1 And Via (24.854mm,16.167mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Polygon  (NONET_L01_P030) on L1 Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Track (25.373mm,21.667mm)(25.704mm,21.336mm) on L1 And Via (25.629mm,23.698mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Track (26.086mm,11.913mm)(26.108mm,11.892mm) on L1 And Via (26.238mm,14.91mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (6.35mm,1.372mm) from L1 to L4 And Track (5.207mm,1.448mm)(6.375mm,1.448mm) on L3 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (10.846mm,18.593mm) from L1 to L4 And Via (12.811mm,21.071mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (5.207mm,1.448mm) from L1 to L4 And Via (10.846mm,18.593mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (12.811mm,21.071mm) from L1 to L4 And Via (15.824mm,20.752mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (12.811mm,21.071mm) from L1 to L4 And Via (17.305mm,22.301mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (17.305mm,22.301mm) from L1 to L4 And Via (25.629mm,23.698mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (25.629mm,23.698mm) from L1 to L4 And Via (32.263mm,24.943mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (32.263mm,24.943mm) from L1 to L4 And Via (34.29mm,24.409mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (33.974mm,20.937mm) from L1 to L4 And Via (34.29mm,24.409mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (34.29mm,24.409mm) from L1 to L4 And Via (36.957mm,24.028mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (38.227mm,24.486mm) from L1 to L4 And Via (45.011mm,23.36mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (38.71mm,16.104mm) from L1 to L4 And Via (41.478mm,18.567mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (41.912mm,18.925mm) from L1 to L4 And Via (42.951mm,20.117mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (42.896mm,21.174mm) from L1 to L4 And Via (42.951mm,20.117mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (42.896mm,21.174mm) from L1 to L4 And Via (45.011mm,23.36mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (45.011mm,23.36mm) from L1 to L4 And Via (46.711mm,21.488mm) from L1 to L4 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Via (46.711mm,21.488mm) from L1 to L4 And Via (47.142mm,19.329mm) from L1 to L4 
+Rule Violations :21
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=2.54mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Routing Topology Rule(Topology=Shortest) (All)
+Rule Violations :0
+
+Processing Rule : Routing Layers(All)
+Rule Violations :0
+
+Processing Rule : Routing Via (MinHoleWidth=0.3mm) (MaxHoleWidth=0.3mm) (PreferredHoleWidth=0.3mm) (MinWidth=0.6mm) (MaxWidth=0.6mm) (PreferedWidth=0.6mm) (All)
+Rule Violations :0
+
+Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.178mm) (Max=0.203mm) (Prefered=0.203mm)  and Width Constraints (Min=0.152mm) (Max=0.152mm) (Prefered=0.152mm) (InDifferentialPairClass('DIFF90'))
+Rule Violations :0
+
+Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.178mm) (Max=0.178mm) (Prefered=0.178mm)  and Width Constraints (Min=0.114mm) (Max=0.114mm) (Prefered=0.114mm) (InDifferentialPairClass('DIFF100'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=25.4mm) (All)
+Rule Violations :0
+
+Processing Rule : Pads and Vias to follow the Drill pairs settings
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.038mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0.102mm) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=0.254mm) (InDifferentialPair('MDI_0') or InDifferentialPair('MDI_1'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=0.127mm) (InDifferentialPair('RD') or InDifferentialPair('TD'))
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0.254mm, Vertical Gap = 0.254mm ) (All),(All) 
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 21
+Waived Violations : 0
+Time Elapsed        : 00:00:01

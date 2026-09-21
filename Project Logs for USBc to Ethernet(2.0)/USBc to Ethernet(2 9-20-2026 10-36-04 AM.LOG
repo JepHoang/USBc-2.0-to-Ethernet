@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=GND_CLASSIS Pin=C4-2
+Removed Pin From Net: NetName=GND_CLASSIS Pin=R15-2
+Added Pin To Net: NetName=GND_USB Pin=C4-2
+Added Pin To Net: NetName=GND_USB Pin=R15-2
+Added Net: Name=GND_USB
+Added Rule: Name=Schematic Supply Nets

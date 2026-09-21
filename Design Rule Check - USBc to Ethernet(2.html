@@ -1,0 +1,445 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD25\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">9/21/2026</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">4:02:18 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc" class="file"><acronym title="C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc">C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">2</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">21</td></tr>
+</table>
+</td>
+</table><a name="IDESYVG2NGG2BPG40LBUGBFVNIXP1OSRNLZJZNM0NG3IFJT3HYUE2"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDK3L0VTM44Y5QGGIKICACHZX4RELC4POEPNYDXOE4W1S2YKP1RUHD">Unplated multi-layer pad(s) detected</a></td>
+<td class="column2">2</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">2</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDT1CMPG4LKWOP55EMR4J4ZRHZHV1HBBXH25ZWNFWUBAYQF0TNSOL">Clearance Constraint (Gap=0mm) (Keepout),(IsPad)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWIRYAFQKGODGBNC2AP2R4HAXWGKFNH2JXBOM0TMW3UAHDABDNMXM">Clearance Constraint (Gap=0.152mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4RVGPO31FIJSIX4OXJZDHMG3IG330X5CLJWGHYILKZVKJRYHWDE">Clearance Constraint (Gap=0.152mm) (InDifferentialPairClass('DIFF90') or InDifferentialPairClass('DIFF100')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDP5Z235U4TGVQOY3WRLJI2LQQULIK4W4TWFQ255NU4ALLU40OHWPM">Short-Circuit Constraint (Allowed=Yes) (WithinRoom('Small')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLKASFOE1QXG2QUG1LIRNVBQFFZO3Y5VM3JLPVP33VMIIUIXBKHL">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">21</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJ0F2Y1S0FJI3PEQ0ILT5NGODYNKWEH0MRRQ243JEH1K1YS3PPTWB">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1GPQAUHXDLCAOVE2RIZSNI0VXBJ5XWQKQNNAXFBXVTP53O4NZMEH">Width Constraint (Min=0.152mm) (Max=2.54mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDMSJUWJLEQN3WGCYH24QC54WRVJXN2YDZOG03GZBELPOCEDQQTULF">Routing Topology Rule(Topology=Shortest) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKW02BYG3TR2ROBYZBENKKSEPRJ2RVYX0AM1EVTLS51FSBF0VC1TB">Routing Layers(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOHBVVFVATH2VNCOYE11ZJG24WGMHMZQBJYIUINOSRQ3DBDNJLVCE">Routing Via (MinHoleWidth=0.3mm) (MaxHoleWidth=0.3mm) (PreferredHoleWidth=0.3mm) (MinWidth=0.6mm) (MaxWidth=0.6mm) (PreferedWidth=0.6mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFUXQGB5BRC1XHVUV34PAJW1OTICZSONGUXALQHGAN5LDMBWZK4RP">Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.178mm) (Max=0.203mm) (Prefered=0.203mm)  and Width Constraints (Min=0.152mm) (Max=0.152mm) (Prefered=0.152mm) (InDifferentialPairClass('DIFF90'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJ2RGMB3ZQMBHB5QM04T2O5DM5OYSYSLGVV4BA1MUP2X2PYUEG5WD">Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.178mm) (Max=0.178mm) (Prefered=0.178mm)  and Width Constraints (Min=0.114mm) (Max=0.114mm) (Prefered=0.114mm) (InDifferentialPairClass('DIFF100'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTBG3VLKGAQA4HSPU4H2WPHO4ZMY02RTFTT3XGJDFTW0K40DIQAGC">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLDYIAFEP01XRNDF1VGWS15KRSI1RHRBRMB2WSVPEJB5PU3LGA3OG">Hole Size Constraint (Min=0.025mm) (Max=25.4mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDU5X1F52VLXFHBCMO23TTPLFDWHEPNQRVPE2TKCKLPKDF3RQCBF0B">Pads and Vias to follow the Drill pairs settings</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAPYHXYFHEOPQIM4FIN0R2QWNSE25SRUH3IU52OIAHWJOMH52BMTN">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJGL1YH5Q5VLPLERG12YPUWWKMOY0F3VUHJDDAYHCAFOF23QLTJFE">Minimum Solder Mask Sliver (Gap=0.038mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQDEKW43C23ZVPSVQTJU3V5PNZHHSEZA1ORATTH04DDVXSHUEYPJ">Silk To Solder Mask (Clearance=0.102mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCX2WX54YU2DOIXAO5V40VUOXSNVLCBVL1ITBU5NEWYLOLNAYYGKK">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2E2OWROEJ0ADOYMPBWW4U4D3OFNI014HJJA2NGUM3MRIEOXT2C">Matched Lengths(Tolerance=0.254mm) (InDifferentialPair('MDI_0') or InDifferentialPair('MDI_1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5VP35VP4BWTGDEDUUUFB3GFWBCBVCWNQPJVI1UGA3NNWOHI5MNZO">Matched Lengths(Tolerance=0.127mm) (InDifferentialPair('RD') or InDifferentialPair('TD'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDCVEVU10YACMJ11TYQS1TOULRHPXUIDN5ELVBT33CBQGMR1BMGP">Component Clearance Constraint ( Horizontal Gap = 0.254mm, Vertical Gap = 0.254mm ) (All),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDEX2FKUXIYUCEFTI2UJAFREGCONTYUHZSPFDLPG2S4GQMQNQSY3J">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">21</td>
+</tr>
+</table><br><a name="IDC30HZ1PCMOKZPFN5MBY3RGTZNJGJUZMNUIDZBRIQQD122LJESPPK"><h2>Warnings</h2></a><a name="IDK3L0VTM44Y5QGGIKICACHZX4RELC4POEPNYDXOE4W1S2YKP1RUHD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Unplated multi-layer pad(s) detected</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12270.039mil|Location2.X=12439.961mil|Location1.Y=10715.512mil|Location2.Y=10885.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12270.039mil|Location2.X=12439.961mil|Location1.Y=10715.512mil|Location2.Y=10885.433mil|Absolute=True">Pad J2-MH2(59.817mm,20.332mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12016.759mil|Location2.X=12375mil|Location1.Y=10036.189mil|Location2.Y=11052.908mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12016.759mil|Location2.X=12375mil|Location1.Y=10036.189mil|Location2.Y=11052.908mil|Absolute=True">Net GND_CLASSIS</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12270.039mil|Location2.X=12439.961mil|Location1.Y=10215.512mil|Location2.Y=10385.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12270.039mil|Location2.X=12439.961mil|Location1.Y=10215.512mil|Location2.Y=10385.433mil|Absolute=True">Pad J2-MH1(59.817mm,7.632mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12016.759mil|Location2.X=12375mil|Location1.Y=10036.189mil|Location2.Y=11052.908mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12016.759mil|Location2.X=12375mil|Location1.Y=10036.189mil|Location2.Y=11052.908mil|Absolute=True">Net GND_CLASSIS</acronym></a></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDLKASFOE1QXG2QUG1LIRNVBQFFZO3Y5VM3JLPVP33VMIIUIXBKHL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10904.007mil|Location2.X=11004.406mil|Location1.Y=10610.594mil|Location2.Y=10825.635mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10904.007mil|Location2.X=11004.406mil|Location1.Y=10610.594mil|Location2.Y=10825.635mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Pad U1-35(23.14mm,20.793mm) on L1 And Via (24.854mm,16.167mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10943.176mil|Location2.X=11084mil|Location1.Y=10554mil|Location2.Y=10669.228mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10943.176mil|Location2.X=11084mil|Location1.Y=10554mil|Location2.Y=10669.228mil|Absolute=True">Un-Routed Net Constraint: Polygon  (NONET_L01_P030) on L1 Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10898.92mil|Location2.X=11109mil|Location1.Y=10753.029mil|Location2.Y=11033mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10898.92mil|Location2.X=11109mil|Location1.Y=10753.029mil|Location2.Y=11033mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Track (25.373mm,21.667mm)(25.704mm,21.336mm) on L1 And Via (25.629mm,23.698mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10927.862mil|Location2.X=11133mil|Location1.Y=10368.191mil|Location2.Y=10687mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10927.862mil|Location2.X=11133mil|Location1.Y=10368.191mil|Location2.Y=10687mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Track (26.086mm,11.913mm)(26.108mm,11.892mm) on L1 And Via (26.238mm,14.91mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10150mil|Location2.X=10351mil|Location1.Y=9954mil|Location2.Y=10157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10150mil|Location2.X=10351mil|Location1.Y=9954mil|Location2.Y=10157mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (6.35mm,1.372mm) from L1 to L4 And Track (5.207mm,1.448mm)(6.375mm,1.448mm) on L3 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10401.094mil|Location2.X=10530.28mil|Location1.Y=10706.094mil|Location2.Y=10855.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10401.094mil|Location2.X=10530.28mil|Location1.Y=10706.094mil|Location2.Y=10855.472mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (10.846mm,18.593mm) from L1 to L4 And Via (12.811mm,21.071mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10179.094mil|Location2.X=10452.906mil|Location1.Y=10031.094mil|Location2.Y=10757.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10179.094mil|Location2.X=10452.906mil|Location1.Y=10031.094mil|Location2.Y=10757.906mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (5.207mm,1.448mm) from L1 to L4 And Via (10.846mm,18.593mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10478.469mil|Location2.X=10648.906mil|Location1.Y=10791.094mil|Location2.Y=10855.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10478.469mil|Location2.X=10648.906mil|Location1.Y=10791.094mil|Location2.Y=10855.472mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (12.811mm,21.071mm) from L1 to L4 And Via (15.824mm,20.752mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10478.469mil|Location2.X=10707.217mil|Location1.Y=10803.661mil|Location2.Y=10903.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10478.469mil|Location2.X=10707.217mil|Location1.Y=10803.661mil|Location2.Y=10903.906mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (12.811mm,21.071mm) from L1 to L4 And Via (17.305mm,22.301mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10655.406mil|Location2.X=11034.906mil|Location1.Y=10852.094mil|Location2.Y=10958.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10655.406mil|Location2.X=11034.906mil|Location1.Y=10852.094mil|Location2.Y=10958.906mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (17.305mm,22.301mm) from L1 to L4 And Via (25.629mm,23.698mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10983.094mil|Location2.X=11296.104mil|Location1.Y=10907.094mil|Location2.Y=11007.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10983.094mil|Location2.X=11296.104mil|Location1.Y=10907.094mil|Location2.Y=11007.906mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (25.629mm,23.698mm) from L1 to L4 And Via (32.263mm,24.943mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11244.293mil|Location2.X=11375.906mil|Location1.Y=10935.094mil|Location2.Y=11007.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11244.293mil|Location2.X=11375.906mil|Location1.Y=10935.094mil|Location2.Y=11007.906mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (32.263mm,24.943mm) from L1 to L4 And Via (34.29mm,24.409mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11311.66mil|Location2.X=11375.906mil|Location1.Y=10798.37mil|Location2.Y=10986.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11311.66mil|Location2.X=11375.906mil|Location1.Y=10798.37mil|Location2.Y=10986.906mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (33.974mm,20.937mm) from L1 to L4 And Via (34.29mm,24.409mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11324.094mil|Location2.X=11480.906mil|Location1.Y=10920.094mil|Location2.Y=10986.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11324.094mil|Location2.X=11480.906mil|Location1.Y=10920.094mil|Location2.Y=10986.906mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (34.29mm,24.409mm) from L1 to L4 And Via (36.957mm,24.028mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11479.094mil|Location2.X=11797.988mil|Location1.Y=10893.793mil|Location2.Y=10989.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11479.094mil|Location2.X=11797.988mil|Location1.Y=10893.793mil|Location2.Y=10989.906mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (38.227mm,24.486mm) from L1 to L4 And Via (45.011mm,23.36mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11498.094mil|Location2.X=11658.906mil|Location1.Y=10608.094mil|Location2.Y=10756.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11498.094mil|Location2.X=11658.906mil|Location1.Y=10608.094mil|Location2.Y=10756.906mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (38.71mm,16.104mm) from L1 to L4 And Via (41.478mm,18.567mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11624.165mil|Location2.X=11716.906mil|Location1.Y=10719.166mil|Location2.Y=10817.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11624.165mil|Location2.X=11716.906mil|Location1.Y=10719.166mil|Location2.Y=10817.906mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (41.912mm,18.925mm) from L1 to L4 And Via (42.951mm,20.117mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11662.906mil|Location2.X=11716.906mil|Location1.Y=10766.094mil|Location2.Y=10859.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11662.906mil|Location2.X=11716.906mil|Location1.Y=10766.094mil|Location2.Y=10859.528mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (42.896mm,21.174mm) from L1 to L4 And Via (42.951mm,20.117mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11662.906mil|Location2.X=11797.988mil|Location1.Y=10807.717mil|Location2.Y=10945.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11662.906mil|Location2.X=11797.988mil|Location1.Y=10807.717mil|Location2.Y=10945.604mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (42.896mm,21.174mm) from L1 to L4 And Via (45.011mm,23.36mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11746.177mil|Location2.X=11864.906mil|Location1.Y=10820.094mil|Location2.Y=10945.604mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11746.177mil|Location2.X=11864.906mil|Location1.Y=10820.094mil|Location2.Y=10945.604mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (45.011mm,23.36mm) from L1 to L4 And Via (46.711mm,21.488mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11813.094mil|Location2.X=11881.906mil|Location1.Y=10735.094mil|Location2.Y=10871.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11813.094mil|Location2.X=11881.906mil|Location1.Y=10735.094mil|Location2.Y=10871.906mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Via (46.711mm,21.488mm) from L1 to L4 And Via (47.142mm,19.329mm) from L1 to L4 </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=AVDD3P3_1 Pin=R17-2
+Added Pin To Net: NetName=AVDD3P3_1 Pin=R23-2
+Change Net Name : Old Net Name=AVDD3P3_1 New Net Name=+3.3V
+Change Net Name : Old Net Name=VDDDIO_3 New Net Name=NetC35_2
+Added Rule: Name=Schematic Supply Nets_9

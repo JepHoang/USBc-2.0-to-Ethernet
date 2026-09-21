@@ -1,0 +1,38 @@
+Added Component: Designator=Y2(Crystal_25MHZ)
+Add component (AddParameter): Name = "Case/Package"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Crystals"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "https://datasheet.octopart.com:443/445I23A25M00000-CTS-Components-datasheet-78374999.pdf?src-supplier=Electro+Sonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://datasheet.octopart.com:443/445I23A25M00000-CTS-Components-datasheet-78374999.pdf?src-supplier=Electro+Sonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Country of Origin"; Value = "Mainland China"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ESR (Equivalent Series Resistance)"; Value = "40?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "25MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency Stability"; Value = "30ppm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency Tolerance"; Value = "0.002%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Harmonized Tariff Schedule (HTS) Code"; Value = "8541.60.00.60"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.3462mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Introduction Date"; Value = "2016-10-07"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "5.0038mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lifecycle Status"; Value = "Production"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Load Capacitance"; Value = "10pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "CTS Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "445I23A25M00000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape & Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "6000=0.4851 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "Unaffected"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series Resistance"; Value = "40?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "0.002%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "3.2mm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC37_1 Pin=Y2-1
+Added Pin To Net: NetName=NetC38_1 Pin=Y2-2
+Change Net Name : Old Net Name=+3.3V New Net Name=AVDD3P3_1
+Change Net Name : Old Net Name=NetC35_2 New Net Name=VDDDIO_3
+Added Member To Class: ClassName=USBc to Ethernet(2.0) Member=Component U1 LAN9500AI-ABZJ-TR
+Added Member To Class: ClassName=USBc to Ethernet(2.0) Member=Component Y2 25MHZ
+Added Rule: Name=Schematic Supply Nets_8

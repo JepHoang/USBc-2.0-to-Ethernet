@@ -1,13 +1,13 @@
 Protel Design System Design Rule Check
 PCB File : C:\ACA_NHAN\CONG_VIEC\Hardware\Project\USBc to Ethernet(2.0)\USBc to Ethernet(2.0).PcbDoc
 Date     : 9/21/2026
-Time     : 9:46:07 AM
+Time     : 5:50:29 PM
 
 WARNING: Unplated multi-layer pad(s) detected
-   Pad J2-MH2(2355mil,800.472mil) on Multi-Layer on Net GND_CLASSIS
    Pad J2-MH1(2355mil,300.472mil) on Multi-Layer on Net GND_CLASSIS
+   Pad J2-MH2(2355mil,800.472mil) on Multi-Layer on Net GND_CLASSIS
 
-Processing Rule : Clearance Constraint (Gap=0mil) (WithinRoom('Ok')),(All)
+Processing Rule : Clearance Constraint (Gap=0mil) (Keepout),(IsPad)
 Rule Violations :0
 
 Processing Rule : Clearance Constraint (Gap=6mil) (InDifferentialPairClass('DIFF90') or InDifferentialPairClass('DIFF100')),(All)
@@ -37,10 +37,10 @@ Rule Violations :0
 Processing Rule : Routing Via (MinHoleWidth=11.811mil) (MaxHoleWidth=11.811mil) (PreferredHoleWidth=11.811mil) (MinWidth=23.622mil) (MaxWidth=23.622mil) (PreferedWidth=23.622mil) (All)
 Rule Violations :0
 
-Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=7mil) (Max=7mil) (Prefered=7mil)  and Width Constraints (Min=4.5mil) (Max=4.5mil) (Prefered=4.5mil) (InDifferentialPairClass('DIFF100'))
+Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=7mil) (Max=8mil) (Prefered=8mil)  and Width Constraints (Min=6mil) (Max=6mil) (Prefered=6mil) (InDifferentialPairClass('DIFF90'))
 Rule Violations :0
 
-Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=7mil) (Max=8mil) (Prefered=8mil)  and Width Constraints (Min=6mil) (Max=6mil) (Prefered=6mil) (InDifferentialPairClass('DIFF90'))
+Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=7mil) (Max=7mil) (Prefered=7mil)  and Width Constraints (Min=4.5mil) (Max=4.5mil) (Prefered=4.5mil) (InDifferentialPairClass('DIFF100'))
 Rule Violations :0
 
 Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
@@ -73,9 +73,6 @@ Rule Violations :0
 Processing Rule : Matched Lengths(Tolerance=5mil) (InDifferentialPair('RD') or InDifferentialPair('TD'))
 Rule Violations :0
 
-Processing Rule : Room Ok (Bounding Region = (11299.151mil, 10594.151mil, 11681.548mil, 10976.548mil) (InComponentClass('Room Definition1'))
-Rule Violations :0
-
 Processing Rule : Component Clearance Constraint ( Horizontal Gap = 10mil, Vertical Gap = 10mil ) (All),(All) 
 Rule Violations :0
 
@@ -85,4 +82,4 @@ Rule Violations :0
 
 Violations Detected : 0
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:00
