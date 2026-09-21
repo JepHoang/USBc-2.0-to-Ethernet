@@ -239,8 +239,9 @@ Priority routing for:
 <tr>
 <td align="center" valign="middle" height="320">
 
-<img width="913" height="410" alt="image" src="https://github.com/user-attachments/assets/14fba79f-b388-4785-901b-62913fd11330" />
-<img width="1065" height="480" alt="image" src="https://github.com/user-attachments/assets/e3e4f237-e6b3-4276-b133-78a135fa833d" />
+<img width="1157" height="497" alt="image" src="https://github.com/user-attachments/assets/c71825a6-fab0-4ab7-adb1-0a3547feb605" />
+<img width="1325" height="581" alt="image" src="https://github.com/user-attachments/assets/84bc1a3f-c2f3-4c88-92b5-f6bd4d1a6184" />
+
 `docs/images/pcb_3d.png`
 
 </td>
