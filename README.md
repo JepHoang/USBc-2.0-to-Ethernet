@@ -69,7 +69,8 @@ Ethernet Cable
 <tr>
 <td align="center" valign="middle" height="320">
 
-**[ INSERT SCHEMATIC IMAGE HERE ]**
+<img width="1218" height="791" alt="image" src="https://github.com/user-attachments/assets/640bdcd9-e1e6-4ea0-b28d-c29c6a989272" />
+
 
 `docs/images/schematic_overview.png`
 
@@ -219,7 +220,9 @@ Priority routing for:
 <tr>
 <td align="center" valign="middle" height="320">
 
-**[ INSERT PCB 2D IMAGE HERE ]**
+<img width="1356" height="591" alt="image" src="https://github.com/user-attachments/assets/9201e9d1-c8b8-48d6-9bf1-a5bceab7435c" />
+<img width="1317" height="591" alt="image" src="https://github.com/user-attachments/assets/74f3b306-c23b-49d1-b437-03e7848ccbf6" />
+
 
 `docs/images/pcb_2d.png`
 
@@ -234,7 +237,8 @@ Priority routing for:
 <tr>
 <td align="center" valign="middle" height="320">
 
-**[ INSERT PCB 3D IMAGE HERE ]**
+<img width="913" height="410" alt="image" src="https://github.com/user-attachments/assets/14fba79f-b388-4785-901b-62913fd11330" />
+
 
 `docs/images/pcb_3d.png`
 
@@ -534,7 +538,7 @@ Suggested repository structure:
 
 | Revision | Date | Description |
 |---|---|---|
-| A | YYYY-MM-DD | Initial design |
+| A | 2026-09-21 | Initial design |
 | B | YYYY-MM-DD | |
 | C | YYYY-MM-DD | |
 
